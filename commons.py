@@ -5,7 +5,7 @@ EXPERIMENTS = {
     "BASE": "xojng",
     "CHEM": "xojnh",
     "MARI": "xojni",
-    "FIRE": "xojnc",
+    "FIRE": "xojnv", # c vs BASE OLD or v/w vs BASE
     "FULL": "xojnl",
 }
 
@@ -32,3 +32,5 @@ LAYERS = {
     "boundary": iris.Constraint(level_height=lambda cell: 0 <= cell <= 2000),
     "free troposphere": iris.Constraint(level_height=lambda cell: 2000 <= cell <= 6000),
 }
+
+SEASONS = ["djf", "mam", "jja", "son"]

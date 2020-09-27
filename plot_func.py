@@ -20,4 +20,4 @@ def use_paper_style():
 
 def use_draft_style():
     """Load custom matplotlib style sheet."""
-    plt.style.use("paper.mplstyle")
+    plt.style.use("draft.mplstyle")

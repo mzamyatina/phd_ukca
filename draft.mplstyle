@@ -12,6 +12,6 @@ mathtext.default: regular  # The default font to use for math.
 figure.dpi: 100  # figure dots per inch
 # the default savefig params can be different from the display params
 # e.g., you may want a higher resolution, or to make the figure
-# background white
+figure.facecolor: white
 savefig.format: png  # png, ps, pdf, svg
 savefig.bbox: tight  # 'tight' or 'standard'

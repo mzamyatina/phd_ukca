@@ -29,8 +29,8 @@ GASES = {
 }
 
 LAYERS = {
-    "boundary": iris.Constraint(level_height=lambda cell: 0 <= cell <= 2000),
-    "free troposphere": iris.Constraint(level_height=lambda cell: 2000 <= cell <= 6000),
+    "BL": {"iris_constr": iris.Constraint(level_height=lambda cell: 0 <= cell <= 2000), "tex": "Boundary layer (0-2 km)"},
+    "FT": {"iris_constr": iris.Constraint(level_height=lambda cell: 5000 <= cell <= 10000), "tex": "Free troposphere (5-10 km)"},
 }
 
 SEASONS = ["djf", "mam", "jja", "son"]

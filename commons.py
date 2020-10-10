@@ -1,12 +1,15 @@
 import iris
 
 EXPERIMENTS = {
-    "BASE OLD": "xojnd",
-    "BASE": "xojng",
-    "CHEM": "xojnh",
-    "MARI": "xojni",
-    "FIRE": "xojnv", # c vs BASE OLD or v/w vs BASE
-    "FULL": "xojnl",
+    "BASE OLD": "xojnd", # MeONO2 initialised with a non-zero steady state value from Banerjee2014 “Base”
+    "BASE": "xojng", # MeONO2 initialised with zero
+    "CHEM": "xojnh", # MeONO2 initialised with zero
+    "MARI": "xojni", # MeONO2 initialised with zero
+    "FIRE OLD1": "xojnc", # MeONO2 initialised with a non-zero steady state value from Banerjee2014 “Base”; iPrONO2 is chemically active, but no iPrONO2 ouput
+    "FIRE OLD2": "xojnv", # t 139 MeONO2 initialised with zero; unexplained jump in burdens
+    "FIRE OLD3": "xojnw", # t 193 # MeONO2 initialised with zero; unexplained jump in burdens; longer than xojnv
+    "FIRE": "xojnvw", # Stitch of xojnv and xojnw
+    "FULL": "xojnl", # MeONO2 initialised with zero
 }
 
 GASES = {

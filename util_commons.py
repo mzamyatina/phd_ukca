@@ -1,23 +1,23 @@
 import iris
 
 EXPERIMENTS = {
-    "BASE OLD": "xojnd", # MeONO2 initialised with a non-zero steady state value from Banerjee2014 “Base”
+    "BASE OLD": "xojnd", # MeONO2 initialised with a non-zero steady state value from Banerjee2014 “Base” (thesis only)
     "BASE": "xojng", # MeONO2 initialised with zero
     "CHEM": "xojnh", # MeONO2 initialised with zero
     "MARI": "xojni", # MeONO2 initialised with zero
-    "FIRE OLD1": "xojnc", # MeONO2 initialised with a non-zero steady state value from Banerjee2014 “Base”; iPrONO2 is chemically active, but no iPrONO2 ouput
-    "FIRE OLD2": "xojnv", # time 139 MeONO2 initialised with zero; unexplained jump in burdens
-    "FIRE OLD3": "xojnw", # time 193 # MeONO2 initialised with zero; unexplained jump in burdens; longer than xojnv
-    "FIRE": "xojnvw", # Stitch of xojnv and xojnw
+    "FIRE OLD": "xojnc", # MeONO2 initialised with a non-zero steady state value from Banerjee2014 “Base”; iPrONO2 is chemically active, but no iPrONO2 ouput (thesis only)
+    "FIRE": "xojnw", # MeONO2 initialised with zero; unexplained jump in burdens; same as xojnv but 193 months and faulty data removed
     "FULL": "xojnl", # MeONO2 initialised with zero
 #     'ORIG'    :'xolnb', # original CheST
 #     'UPDT'    :'xolna', # updated CheST
 }
 
 # Experiments history
+# BASE OLD called SSAN in the thesis
 # CHEM xojne had a strange O3 burden
-# MARI xojnb MeONO2 wasn't initialized with zero and no n/iPrONO2 oceanic emissions
-# FIRE xojnc MeONO2 wasn't initialized with zero and wrong C2-C3 RONO2 outputs
+# MARI xojnb MeONO2 initialised with a non-zero steady state value from Banerjee2014 “Base” and no n/iPrONO2 oceanic emissions
+# FIRE OLD called FIRE in the thesis
+# FIRE xojnv MeONO2 initialised with zero; unexplained jump in burdens; 139 months
 # FULL xojnk had a wrong setup
 
 STASH = {

@@ -1,11 +1,11 @@
 import iris
 
 EXPERIMENTS = {
-    "BASE": {"umui": "xojng", "color": "C5", "label": "BASE"}, # MeONO2 initialised with zero
-    "CHEM": {"umui": "xojnh", "color": "C6", "label": "CHEM"}, # MeONO2 initialised with zero
-    "MARI": {"umui": "xojni", "color": "C0", "label": "MARI"}, # MeONO2 initialised with zero
-    "FIRE": {"umui": "xojnw", "color": "C3", "label": "FIRE"}, # MeONO2 initialised with zero; unexplained jump in burdens; same as xojnv but 193 months and faulty data removed
-    "FULL": {"umui": "xojnl", "color": "C2", "label": "FULL"}, # MeONO2 initialised with zero
+    "BASE": "xojng", # MeONO2 initialised with zero
+    "CHEM": "xojnh", # MeONO2 initialised with zero
+    "MARI": "xojni", # MeONO2 initialised with zero
+    "FIRE": "xojnw", # MeONO2 initialised with zero; unexplained jump in burdens; same as xojnv but 193 months and faulty data removed
+    "FULL": "xojnl", # MeONO2 initialised with zero
 #     'ORIG'    :'xolnb', # original CheST
 #     'UPDT'    :'xolna', # updated CheST
 }

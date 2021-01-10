@@ -60,9 +60,9 @@ STASH = {
 
 GASES = {
 #     "main": {
-        "ch4": {"tex": "$CH_4$", "molar_mass": 16.0425,},
-        "c2h6": {"tex": "$C_2H_6$", "molar_mass": 30.0690,},
-        "c3h8": {"tex": "$C_3H_8$", "molar_mass": 44.0956,},
+        "ch4": {"tex": "$CH_4$", "molar_mass": 16.0425, "rh": True},
+        "c2h6": {"tex": "$C_2H_6$", "molar_mass": 30.0690, "rh": True},
+        "c3h8": {"tex": "$C_3H_8$", "molar_mass": 44.0956, "rh": True},
         "no": {"tex": "NO", "molar_mass": 30.006, "nox": True, "noy": True},
         "no2": {"tex": "$NO_2$", "molar_mass": 46.006, "nox": True, "noy": True},
         "nox": {"tex": "$NO_x$",},

@@ -101,7 +101,3 @@ LAYERS = {
 }
 
 SEASONS = ["djf", "mam", "jja", "son"]
-
-# Coefficients to convert mass mixing ratio to volume mixing ratio
-# M_air = 28.97 # molar mass of dry air [g mol-1]
-# coeff_o3 = (M_air/47.997)*1e9

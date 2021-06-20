@@ -2,6 +2,8 @@ from util_commons import GASES
 
 import iris
 
+import numpy as np
+
 from aeolus.coord import add_cyclic_point_to_cube
 
 
@@ -45,20 +47,15 @@ def fdr_threshold(pvalues, alpha=0.05 * 2):
     return np.max(np.where(p <= np.arange(1, n + 1) / n * alpha, p, 0))
 
 
-def stipple_bl(cube, pval_arr, fdr, central_long=0):
-    """Stipple areas where p-values are statistically significant.
+def stipple_bl(pval_cube, fdr, central_long=0):
+    """Stipple areas where p-values are NOT statistically significant.
     Inspired by https://groups.google.com/forum/#!topic/scitools-iris/Xm2IhQ6YKQA"""
-    xOrg = cube.coord("longitude").points
-    yOrg = cube.coord("latitude").points
-    nlon = len(xOrg)
-    nlat = len(yOrg)
-    xData = np.reshape(np.tile(xOrg, nlat), pval_arr.shape)
-    yData = np.reshape(np.repeat(yOrg, nlon), pval_arr.shape)
+    xx, yy = np.meshgrid(pval_cube.coord("longitude").points, pval_cube.coord("latitude").points)
     if fdr:
-        thresh = fdr_threshold(pval_arr)  # false discovery rate threshold
+        thresh = fdr_threshold(pval_cube.data)  # false discovery rate threshold
     else:
         thresh = 0.05
-    sigPoints = pval_arr < thresh
-    xPoints = xData[sigPoints] - central_long
-    yPoints = yData[sigPoints]
-    return (xPoints, yPoints)
+    sig_points = pval_cube.data > thresh
+    xxp = xx[sig_points] - central_long
+    yyp = yy[sig_points]
+    return xxp, yyp

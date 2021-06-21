@@ -15,3 +15,4 @@ figure.dpi: 300  # figure dots per inch
 figure.facecolor: white
 savefig.format: png  # png, ps, pdf, svg
 savefig.bbox: tight  # 'tight' or 'standard'
+savefig.dpi: 300

@@ -1,7 +1,7 @@
 import iris
 
 EXPERIMENTS = {
-    "BASE": "xojng", # MeONO2 initialised with zero
+    "CTRL": "xojng", # MeONO2 initialised with zero
     "CHEM": "xojnh", # MeONO2 initialised with zero
     "MARI": "xojni", # MeONO2 initialised with zero
     "FIRE": "xojnw", # MeONO2 initialised with zero; unexplained jump in burdens; same as xojnv but 193 months and faulty data removed

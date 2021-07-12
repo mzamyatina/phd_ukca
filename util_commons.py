@@ -96,8 +96,22 @@ GASES = {
 }
 
 LAYERS = {
-    "BL": {"iris_constr": iris.Constraint(level_height=lambda cell: 0 <= cell <= 2000), "tex": "Boundary layer (0-2 km)"},
-    "FT": {"iris_constr": iris.Constraint(level_height=lambda cell: 5000 <= cell <= 10000), "tex": "Free troposphere (5-10 km)"},
+    "0-2km": {
+        "iris_constr": iris.Constraint(level_height=lambda cell: 0 <= cell <= 2000),
+        "tex": "Boundary layer (0-2 km)",
+    },
+    "5-10km": {
+        "iris_constr": iris.Constraint(level_height=lambda cell: 5000 <= cell <= 10000),
+        "tex": "Free troposphere (5-10 km)",
+    },
+    "0-17km": {
+        "iris_constr": iris.Constraint(level_height=lambda cell: 0 <= cell <= 17000),
+        "tex": "Troposphere (0-17 km)",
+    },
+    "0-85km": {
+        "iris_constr": iris.Constraint(level_height=lambda cell: 0 <= cell <= 90000),
+        "tex": "Troposphere and stratosphere(0-85 km)",
+    },
 }
 
 SEASONS = ["djf", "mam", "jja", "son"]

@@ -20,3 +20,8 @@ def use_paper_style():
 def use_draft_style():
     """Load custom matplotlib style sheet."""
     plt.style.use("util_draft.mplstyle")
+
+
+def m_to_km(x, pos):
+    """Convert meters to kilometers when plotting yaxis labels."""
+    return int(x * 1e-3)

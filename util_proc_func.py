@@ -6,12 +6,12 @@ import numpy as np
 
 from scipy import stats
 
-# from aeolus.coord import add_cyclic_point_to_cube
+from aeolus.coord import add_cyclic_point_to_cube
 
 
-# def mmr_to_vmr(molar_mass, air_mass=28.97):
-#     """Convert mass mixing ratio to volume mixing ratio."""
-#     return air_mass / molar_mass
+def mmr_to_vmr(molar_mass, air_mass=28.97):
+    """Convert mass mixing ratio to volume mixing ratio."""
+    return air_mass / molar_mass
 
 
 # # Add mass mixing ratio to volume mixing ratio conversion coefficient to GASES
@@ -109,11 +109,11 @@ def stipple_out(cube_pval, fdr_on=True):
     return coord_points_above_thresh
 
 
-# def calc_seasonal_mean_in_layer(cube, season, layer):
-#     """Calculate seasonal mean in a specified layer and add a cyclic longitude."""
-#     ssn = iris.Constraint(season=season)
-#     cb = cube.extract(ssn & layer).collapsed(
-#         ["season", "level_height"], iris.analysis.MEAN
-#     )
-#     cyclic_cb = add_cyclic_point_to_cube(cb)
-#     return cyclic_cb
+def calc_seasonal_mean_in_layer(cube, season, layer):
+    """Calculate seasonal mean in a specified layer and add a cyclic longitude."""
+    ssn = iris.Constraint(season=season)
+    cb = cube.extract(ssn & layer).collapsed(
+        ["season", "level_height"], iris.analysis.MEAN
+    )
+    cyclic_cb = add_cyclic_point_to_cube(cb)
+    return cyclic_cb

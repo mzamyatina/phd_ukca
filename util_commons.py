@@ -130,7 +130,7 @@ GASES = {
         "noy": True,
     },
     "n2o5": {
-        "tex": "N_2O_5",
+        "tex": "$N_2O_5$",
         "molar_mass": 108.01,
         "ppn": "ppbv",
         "nox": False,
